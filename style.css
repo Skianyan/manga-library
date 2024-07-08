@@ -1,0 +1,85 @@
+@font-face {
+	font-family: "Fafo";
+	src: url(src/fonts/Fafo\ Nihongo.otf), url(src/fonts/Fafo\ Nihongo.ttf);
+}
+* {
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 1fr 9fr;
+}
+header {
+	background-color: rgb(223, 242, 235);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 5vw;
+	grid-area: 1 / 1 / 2 / 4;
+	z-index: 1;
+	box-shadow: 0px 5px 5px rgb(150, 179, 154);
+}
+header > div:first-of-type {
+	font-size: x-large;
+}
+header > div > div:first-of-type {
+	font-family: "Fafo";
+}
+#topmenu {
+	display: flex;
+	gap: 2vw;
+}
+#leftside {
+	background-color: rgb(108, 154, 115);
+	z-index: 2;
+	grid-area: 2 / 1 / 3 / 2;
+}
+#leftside > p {
+	margin: 25px;
+}
+main {
+	background-color: rgb(244, 248, 255);
+	grid-area: 2 / 2 / 3 / 3;
+}
+#cardbox {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	margin: 25px;
+}
+#cardbox > div {
+	background-color: rgb(188, 214, 183);
+	border-radius: 5px;
+	min-height: 50px;
+	padding: 10px;
+	box-shadow: 0px 5px 5px rgb(117, 137, 119);
+}
+#cardbox > div > button {
+	margin: 5px 10px 2px 2px;
+	padding: 2px 5px;
+}
+#rightside {
+	background-color: rgb(108, 154, 115);
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	grid-area: 2 / 3 / 3 / 4;
+}
+#rightside > button {
+	padding: 5px 10px;
+	margin-top: 25px;
+}
+#formElement {
+	flex-direction: column;
+	gap: 5px;
+	margin-top: 15px;
+}
+#submit > input {
+	margin-top: 5px;
+	padding: 3px 10px;
+}

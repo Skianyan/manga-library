@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Liberry</title>
+		<link rel="shortcut icon" href="#" />
+		<script src="./main.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<div style="display: flex">
+				<div>漫画図書館</div>
+				<div>「Manga Library」</div>
+			</div>
+			<div id="topmenu">
+				<div>Home</div>
+				<div>Add</div>
+				<div>Browse</div>
+			</div>
+		</header>
+		<aside id="leftside">
+			<p>About.</p>
+			<p>
+				This library contains some manga i have read over the years, and some i
+				want to read in the future, you can add some more books with the form on
+				the right side of the page :smile:
+			</p>
+		</aside>
+		<main>
+			<div id="cardbox"></div>
+		</main>
+		<aside id="rightside">
+			<button onclick="showForm()">Display form</button>
+			<form id="formElement" style="display: flex">
+				<legend style="align-self: center">Submit new book</legend>
+				<div>
+					<label for="title">Title: </label>
+					<input id="title" type="text" />
+				</div>
+				<div>
+					<label for="author">Author: </label>
+					<input id="author" type="text" />
+				</div>
+				<div>
+					<label for="volumes">Volumes: </label>
+					<input id="volumes" type="text" />
+				</div>
+				<div style="display: flex">
+					<legend>Read Yet?:</legend>
+					<input id="readYes" type="radio" name="readYet" value="Yes" />
+					<label for="readYes">Yes</label>
+					<input id="readNo" type="radio" name="readYet" value="No" />
+					<label for="readNo">No</label>
+				</div>
+				<div id="submit" style="align-self: center">
+					<input type="submit" value="Submit" />
+					<input type="button" value="Show list" onclick="displayLib()" />
+				</div>
+			</form>
+		</aside>
+	</body>
+</html>
